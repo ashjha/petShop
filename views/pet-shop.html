@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body ng-app='petApp' ng-controller="petCtrl">
+  <div ng-include="'header.html'"></div>
+  <form name='pet-shop' ng-submit="buy()">
+    <div class="pet" ng-repeat="pet in petsList">
+      <p> {{pet.name}}: <input type="number" ng-model="pet.item" name="{{$index}}" min=0  /></p>
+    </div>
+    <input type="submit" value="Buy" />   
+  </form>
+</body>
+
+<script type="text/javascript" src='/javascripts/angular.min.js'></script>
+<script type="text/javascript" src='/javascripts/pet.ctrl.js'></script>
+</html>

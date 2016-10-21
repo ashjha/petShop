@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body ng-app='petApp' ng-controller="petCtrl">
+  <div ng-include="'header.html'"></div>
+
+<div class="pet" ng-repeat="pet in pets"> 
+  <p> {{pet.name}} - {{pet.item?pet.item:0}}</p>
+</div>
+
+</body>
+<script type="text/javascript" src='/javascripts/angular.min.js'></script>
+<script type="text/javascript" src='/javascripts/pet.ctrl.js'></script>
+</html>
